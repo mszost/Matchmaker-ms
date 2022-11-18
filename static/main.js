@@ -1,4 +1,3 @@
-/*
 function calculateCompatbility() {
     const preferedAnswers = [3, 4, 1];
     console.log('calculating love');
@@ -18,7 +17,5 @@ function calculateCompatbility() {
     }
 
     console.log(totalCompatibilty);
-
     document.getElementById("score").innerHTML = "Your compatibility is: " + totalCompatibilty;
     }
-     */
