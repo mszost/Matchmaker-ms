@@ -10,7 +10,7 @@
 Eric Pogue (MM Lite and Programming Together)
 
 
-vlt_dev on instagram ("radio-style" buttons for inputting answers)
+@vlt_dev on instagram (CSS for changing appearance of radio button inputs)
 
 
 ## Instructions:
