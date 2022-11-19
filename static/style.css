@@ -62,6 +62,7 @@ button {
     font-weight: bold;
     color: rgb(94, 58, 58);
     border-radius: 10px;
+    transition: 250ms;
 }
 
 button:hover {

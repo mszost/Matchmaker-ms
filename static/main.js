@@ -19,19 +19,10 @@
     }*/
 var userAnswerIDs = [];
 
-function checkQ1a() {
-    if (document.getElementById('q1a').checked) {
-        console.log('1 q1a IS checked :)');
-    } else {
-        console.log('0 q1a NOT checked :(');
-    }
-}
-
-function getRadioIDs(q) {
+function getRadioIDs() {
     const questions = ['q1', 'q2', 'q3', 'q4', 'q5']
-
-    //iterates q1-5, empties the if there is anything in it already
     userAnswerIDs.length = 0;
+    //iterates q1-5
     for (var i = 0; i < questions.length; i++)
     {
         // iterates a-e for each question
@@ -46,7 +37,7 @@ function getRadioIDs(q) {
         }
     }
     
-    console.log('userAnswerIDs', userAnswerIDs);
+    //console.log('userAnswerIDs', userAnswerIDs);
     return userAnswerIDs;
 
     /* Determines which radio button is selected and adds it to userAnswerIDs
@@ -63,9 +54,30 @@ function getRadioIDs(q) {
 
 function calculateCompatibility() {
     const DESIRED_VALUES = [1, 1, 1, 1, 1];
+    const WEIGHTINGS = [1, 1, 2, 2, 3]
+    var differenceArray = [];
+    var totalScore = 0
+
+    userAnswerIDs.length = 0;
+    differenceArray.length = 0;
+
+    for (var i = 0; i < DESIRED_VALUES.length; i++) {
+        differenceArray.push(Math.abs(DESIRED_VALUES[i] - document.getElementById(getRadioIDs()[i]).value) * WEIGHTINGS[i])
+    }
+
+    for (var i = 0; i < differenceArray.length; i++) {
+        totalScore += differenceArray[i]; 
+    }
+
+    totalScore = Math.abs(totalScore - 100)
+    
+    console.log('differenceArray', differenceArray);
+    console.log('totalScore', totalScore);
+
+    document.getElementById("score").innerHTML = "Your score is: " + totalScore;
+}
 
     
-}
 
 /*
 for (var i = 0; i < document.getElementsByName('q1').length; i++) {
