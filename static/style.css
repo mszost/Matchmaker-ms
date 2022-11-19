@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Atkinson';
+    src: url('assets/AtkinsonHyperlegible-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Bigfat Script';
+    src: url('assets/Bigfat\ Script.ttf');
+}
+
+@font-face {
+    font-family: 'Bigfat Xtrude';
+    src: url('assets/Bigfat\ Script\ Xtrude.ttf');
+}
+
+.banner {
+    text-align: center;
+    font-weight: normal;
+}
+
+.banner span {
+    font-family: 'Bigfat Xtrude';
+    font-size: 90px;
+    color: rgb(94, 58, 58);
+    position: relative;
+}
+
+.banner span::before {
+    font-family: 'Bigfat Script';
+    color: rgb(241, 191, 98);
+    position: absolute;
+    content: attr(data-title);
+}
+
+#subtitle {
+    font-style: italic;
+}
+
+body {
+    background-color: rgb(228, 199, 165);
+    font-family: 'Atkinson';
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(94, 58, 58);
+}
