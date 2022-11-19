@@ -29,9 +29,14 @@
 
 .banner span::before {
     font-family: 'Bigfat Script';
-    color: #f1bf62;
+    color: #fac87d;
     position: absolute;
     content: attr(data-title);
+}
+
+.questions {
+    text-align: center;
+    white-space: nowrap;
 }
 
 #subtitle {
@@ -43,16 +48,16 @@
     padding-top: 5px;
 }
 
-#quest {
-    text-align: center;
-}
-
 body {
     background-color: #e4c7a5;
     font-family: 'Atkinson';
     font-size: 20px;
     font-weight:bold;
-    color: #850016;
+    color: #4f1919;
+}
+
+label {
+    font-size: 16px;
 }
 
 button {
@@ -68,11 +73,6 @@ button {
 button:hover {
     transition: 300ms;
     background-color: hsl(32, 54%, 71%);
-}
-
-.questions {
-    text-align: center;
-    white-space: nowrap;
 }
 
 input { 
@@ -97,33 +97,3 @@ input:checked {
     border: 2px solid #5e3a3a;
     background-color: #eca8c4;
 }
-
-label {
-    font-size: 16px;
-}
-
-/*
-
-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    box-shadow: 0px 0px 5px #c6aab1;
-    border: 0.2vw solid #f1bf62;
-    background-color: #5e3a3a;
-    transition: 0.2s all linear;
-    margin-right: 100px;
-    position: relative;
-    top: 4px;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-input:checked {
-    border: 0.45vw solid #5e3a3a;
-    background-color: #f1bf62;
-}
-*/

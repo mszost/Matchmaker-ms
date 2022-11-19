@@ -3,16 +3,16 @@ var userAnswerIDs = [];
 function getRadioIDs() {
     const questions = ['q1', 'q2', 'q3', 'q4', 'q5']
     userAnswerIDs.length = 0;
-    //iterates q1-5
+    //iterates q1-5 radio groups
     for (var i = 0; i < questions.length; i++)
     {
-        // iterates a-e for each question
+        // iterates a-e radios for each group
         for (var n = 0; n < document.getElementsByName(questions[i]).length; n++) 
         {
-            // checks which radio is selected
+            // checks which radio is selected from the group
             if (document.getElementsByName(questions[i])[n].checked)
             {
-                // adds selected radio id to userAnswerIDs
+                // adds selected radio ID to userAnswerIDs
                 userAnswerIDs.push(document.getElementsByName(questions[i])[n].id)
             }
         }
@@ -30,11 +30,11 @@ function calculateCompatibility() {
     userAnswerIDs.length = 0;
     differenceArray.length = 0;
 
-    for (var i = 0; i < DESIRED_VALUES.length; i++) {
+    for (var i = 0; i < DESIRED_VALUES.length; i++) { // appends instance of absolute value of (DESIRED VALUE - USER VALUE) * WEIGHTS) to array once for every ID
         differenceArray.push(Math.abs(DESIRED_VALUES[i] - document.getElementById(getRadioIDs()[i]).value) * WEIGHTINGS[i])
     }
 
-    for (var i = 0; i < differenceArray.length; i++) {
+    for (var i = 0; i < differenceArray.length; i++) { // adds all items in differenceArray into one sum variable called totalScore
         totalScore += differenceArray[i]; 
     }
 
