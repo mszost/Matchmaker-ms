@@ -1,22 +1,3 @@
-/*function calculateCompatbility() {
-    const preferedAnswers = [3, 4, 1];
-    console.log('calculating love');
-    var userAnswers = [];
-    userAnswers.push(document.getElementById("q1").selectedOptions[0].value);
-
-    console.log(userAnswers);
-
-    let totalCompatibilty = 0;
-
-    for (let i = 0; i < userAnswers.length; i++) {
-        var userAnswers = parseInt(userAnswers[i]);
-        let questionCompatibility = 5 - Math.abs(userAnswers - preferedAnswers[i]);
-        totalCompatibilty += questionCompatibility;
-    }
-
-    console.log(totalCompatibilty);
-    document.getElementById("score").innerHTML = "Your compatibility is: " + totalCompatibilty;
-    }*/
 var userAnswerIDs = [];
 
 function getRadioIDs() {
@@ -37,19 +18,7 @@ function getRadioIDs() {
         }
     }
     
-    //console.log('userAnswerIDs', userAnswerIDs);
     return userAnswerIDs;
-
-    /* Determines which radio button is selected and adds it to userAnswerIDs
-    userAnswerIDs.pop(0)
-        for (var i = 0; i < document.getElementsByName('q1').length; i++) {
-            if (document.getElementsByName('q1')[i].checked) {
-                userAnswerIDs.push(document.getElementsByName('q1')[i].id)
-                console.log('ARRAY:', userAnswerIDs)
-            }
-        }
-    }
-    */
 }
 
 function calculateCompatibility() {
@@ -76,14 +45,3 @@ function calculateCompatibility() {
 
     document.getElementById("score").innerHTML = "Your score is: " + totalScore;
 }
-
-    
-
-/*
-for (var i = 0; i < document.getElementsByName('q1').length; i++) {
-    if (document.getElementsByName('q1')[i].checked) {
-        userAnswerIDs.push(document.getElementsByName('q1')[i].id)
-
-        console.log('ARRAY:', userAnswerIDs);
-    }
-} */
