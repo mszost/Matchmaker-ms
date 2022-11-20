@@ -12,9 +12,13 @@
     <p id="subtitle">Find your true love using Matchmaker!</p>
     <br><br>
 
-    <div class="questions">
+    <div class="guide">
+        <span data-title="Strongly Disagree">Strongly Agree</span>
+    </div>
 
-        <label>Question One</label><br><br>
+    <div class="main">
+
+        <label>Question One</label><br>
         <div>
             <input type="radio" name="q1" id="1a" value="1">
             <input type="radio" name="q1" id="1b" value="2">
@@ -25,7 +29,7 @@
 
         <br><br>
 
-        <label>Question Two</label><br><br>
+        <label>Question Two</label><br>
         <div>
             <input type="radio" name="q2" id="2a" value="1">
             <input type="radio" name="q2" id="2b" value="2">
@@ -36,7 +40,7 @@
 
         <br><br>
 
-        <label>Question Three</label><br><br>
+        <label>Question Three</label><br>
         <div>
             <input type="radio" name="q3" id="3a" value="1">
             <input type="radio" name="q3" id="3b" value="2">
@@ -47,7 +51,7 @@
 
         <br><br>
 
-        <label>Question Four</label><br><br>
+        <label>Question Four</label><br>
         <div>
             <input type="radio" name="q4" id="4a" value="1">
             <input type="radio" name="q4" id="4b" value="2">
@@ -58,7 +62,7 @@
 
         <br><br>
 
-        <label>Question Five</label><br><br>
+        <label>Question Five</label><br>
         <div>
             <input type="radio" name="q5" id="5a" value="1">
             <input type="radio" name="q5" id="5b" value="2">
@@ -71,6 +75,7 @@
 
         <button onclick="calculateCompatibility()">calculateCompatibility</button>
         <p id="score">Your score is: </p>
+        <p id="msg"></p>
     </div>
 
 <script src="main.js"></script>

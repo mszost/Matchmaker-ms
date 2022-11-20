@@ -4,20 +4,16 @@ function getRadioIDs() {
     const questions = ['q1', 'q2', 'q3', 'q4', 'q5']
     userAnswerIDs.length = 0;
     //iterates q1-5 radio groups
-    for (var i = 0; i < questions.length; i++)
-    {
-        // iterates a-e radios for each group
-        for (var n = 0; n < document.getElementsByName(questions[i]).length; n++) 
-        {
+    for (var i = 0; i < questions.length; i++) {
+        // nested loop iterates a-e radios for each group
+        for (var n = 0; n < document.getElementsByName(questions[i]).length; n++) {
             // checks which radio is selected from the group
-            if (document.getElementsByName(questions[i])[n].checked)
-            {
+            if (document.getElementsByName(questions[i])[n].checked) {
                 // adds selected radio ID to userAnswerIDs
                 userAnswerIDs.push(document.getElementsByName(questions[i])[n].id)
             }
         }
     }
-    
     return userAnswerIDs;
 }
 
@@ -43,5 +39,13 @@ function calculateCompatibility() {
     console.log('differenceArray', differenceArray);
     console.log('totalScore', totalScore);
 
-    document.getElementById("score").innerHTML = "Your score is: " + totalScore;
+    document.getElementById("score").innerHTML = "Your score is: " + totalScore + "%";
+    
+    if (totalScore > 90) {
+        document.getElementById("msg").innerHTML = "marriage!";
+    } else if (totalScore < 70) {
+        document.getElementById("msg").innerHTML = "Go away!";
+    } else {
+        document.getElementById("msg").innerHTML = "friends!";
+    }
 }
