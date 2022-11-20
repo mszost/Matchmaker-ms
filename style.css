@@ -36,19 +36,15 @@
 
 .guide {
     text-align: center;
+    position: relative;
     font-size: 15px;
     color: #5e3a3a;
     opacity: 70%;
     transform: translateY(47px);
 }
 
-.guide span {
-    position: relative;
-}
-
 .guide span::before {
     margin-right: 45vw;
-    position: relative;
     content: attr(data-title);
 }
 
@@ -67,7 +63,12 @@
 }
 
 #score {
-    opacity: 70%;
+    opacity: 40%;
+    line-height: 20%;
+}
+
+#msg {
+    line-height: 60%;
 }
 
 body {
