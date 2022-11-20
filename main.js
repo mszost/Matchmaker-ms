@@ -18,27 +18,23 @@ function getRadioIDs() {
 }
 
 function calculateCompatibility() {
+    const scoreElement = document.querySelector('#score'); // for editing css upon function call
     const DESIRED_VALUES = [1, 1, 1, 1, 1];
     const WEIGHTINGS = [1, 1, 2, 2, 3]
     var differenceArray = [];
     var totalScore = 0
 
-    userAnswerIDs.length = 0;
+    userAnswerIDs.length = 0; // reset lists before running loops
     differenceArray.length = 0;
 
     for (var i = 0; i < DESIRED_VALUES.length; i++) { // appends instance of absolute value of (DESIRED VALUE - USER VALUE) * WEIGHTS) to array once for every ID
         differenceArray.push(Math.abs(DESIRED_VALUES[i] - document.getElementById(getRadioIDs()[i]).value) * WEIGHTINGS[i])
-    }
-
-    for (var i = 0; i < differenceArray.length; i++) { // adds all items in differenceArray into one sum variable called totalScore
+    } for (var i = 0; i < differenceArray.length; i++) { // adds all items in differenceArray into one sum variable called totalScore
         totalScore += differenceArray[i]; 
     }
 
     totalScore = Math.abs(totalScore - 100)
-    
-    console.log('differenceArray', differenceArray);
-    console.log('totalScore', totalScore);
-
+    scoreElement.style.opacity = '100%';
     document.getElementById("score").innerHTML = "Your score is: " + totalScore + "%";
     
     if (totalScore > 90) {

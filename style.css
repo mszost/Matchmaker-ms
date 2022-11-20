@@ -66,6 +66,10 @@
     padding-top: 5px;
 }
 
+#score {
+    opacity: 70%;
+}
+
 body {
     background-color: #e4c7a5;
     font-family: 'Atkinson';
