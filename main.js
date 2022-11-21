@@ -39,10 +39,10 @@ function calculateCompatibility() {
     document.getElementById("score").innerHTML = "Your score is: " + totalScore + "%";
     
     if (totalScore > 90) {
-        document.getElementById("msg").innerHTML = "marriage!";
+        document.getElementById("msg").innerHTML = "Let's get married!";
     } else if (totalScore < 70) {
-        document.getElementById("msg").innerHTML = "Go away!";
+        document.getElementById("msg").innerHTML = "Go away ...";
     } else {
-        document.getElementById("msg").innerHTML = "friends!";
+        document.getElementById("msg").innerHTML = "We can be friends.";
     }
 }
