@@ -19,8 +19,8 @@ function getRadioIDs() {
 
 function calculateCompatibility() {
     const scoreElement = document.querySelector('#score'); // for editing css upon function call
-    const DESIRED_VALUES = [1, 1, 1, 1, 1];
-    const WEIGHTINGS = [1, 1, 2, 2, 3]
+    const DESIRED_VALUES = [4, 3, 5, 4, 5];
+    const WEIGHTINGS = [1, 2, 3, 2, 1]
     var differenceArray = [];
     var totalScore = 0
 

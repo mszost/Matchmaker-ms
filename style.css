@@ -1,14 +1,10 @@
 @font-face {
     font-family: 'Atkinson';
     src: url('assets/AtkinsonHyperlegible-Regular.ttf');
-}
-
-@font-face {
+} @font-face {
     font-family: 'Bigfat Script';
     src: url('assets/Bigfat\ Script.ttf');
-}
-
-@font-face {
+} @font-face {
     font-family: 'Bigfat Xtrude';
     src: url('assets/Bigfat\ Script\ Xtrude.ttf');
 }
@@ -18,16 +14,12 @@
     font-weight: normal;
     line-height: 100%;
     padding-top: 35px;
-}
-
-.banner span {
+} .banner span {
     font-family: 'Bigfat Xtrude';
     font-size: 90px;
     color: #5e3a3a;
     position: relative;
-}
-
-.banner span::before {
+} .banner span::before {
     font-family: 'Bigfat Script';
     color: #fac87d;
     position: absolute;
@@ -41,9 +33,7 @@
     color: #5e3a3a;
     opacity: 70%;
     transform: translateY(65px);
-}
-
-.guide span::before {
+} .guide span::before {
     margin-right: 45vw;
     content: attr(data-title);
 }
@@ -79,26 +69,26 @@ body {
     font-size: 18px;
     font-weight:bold;
     color: #4f1919;
-    
+}
+
+label {
+    line-height: 200%;
 }
 
 button {
     background-color: #e4c7a5;
-    font-family: 'Atkinson';
     font-size: 18px;
     font-weight: bold;
     color: rgb(94, 58, 58);
     border-radius: 10px;
     transition: 250ms;
-}
-
-button:hover {
+} button:hover {
     transition: 300ms;
     background-color: hsl(32, 54%, 71%);
 }
 
 input { 
-    margin-right: 4vw; /* sets radio distance from each other */
+    margin-right: 4vw;
     margin-left: 4vw;
     appearance: none;
     border-radius: 50%;
@@ -112,14 +102,10 @@ input {
     top: 2px;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-}
-
-input:hover {
+} input:hover {
     border: 6.5px solid #5e3a3a;
     background-color: rgba(236, 167, 196);
-}
-
-input:checked {
+} input:checked {
     border: 2px solid #5e3a3a;
     background-color: #eca8c4;
 }
