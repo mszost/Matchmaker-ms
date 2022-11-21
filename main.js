@@ -34,13 +34,13 @@ function calculateCompatibility() {
         totalScore += differenceArray[i]; 
     }
 
-    totalScore = Math.abs(totalScore - 100)
+    totalScore = Math.abs((totalScore*3) - 100)
     scoreElement.style.opacity = '100%';
     document.getElementById("score").innerHTML = "Your score is: " + totalScore + "%";
     
-    if (totalScore > 92) {
+    if (totalScore > 85) {
         document.getElementById("msg").innerHTML = "Let's get married!";
-    } else if (totalScore < 80) {
+    } else if (totalScore < 50) {
         document.getElementById("msg").innerHTML = "Go away ...";
     } else {
         document.getElementById("msg").innerHTML = "We can be friends.";
