@@ -38,9 +38,9 @@ function calculateCompatibility() {
     scoreElement.style.opacity = '100%';
     document.getElementById("score").innerHTML = "Your score is: " + totalScore + "%";
     
-    if (totalScore > 90) {
+    if (totalScore > 92) {
         document.getElementById("msg").innerHTML = "Let's get married!";
-    } else if (totalScore < 70) {
+    } else if (totalScore < 80) {
         document.getElementById("msg").innerHTML = "Go away ...";
     } else {
         document.getElementById("msg").innerHTML = "We can be friends.";
