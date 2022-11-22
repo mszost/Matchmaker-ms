@@ -10,8 +10,4 @@
 Eric Pogue (MM Lite and Programming Together)
 
 
-@vlt_dev on instagram (CSS for changing appearance of radio button inputs)
-
-
-## Instructions:
-Go to (LINK) and PREFORM. 
+CSS animations for radio buttons adapted from @vlt_dev on instagram
